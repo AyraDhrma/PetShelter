@@ -1,0 +1,26 @@
+<vector android:autoMirrored="true" android:height="24dp"
+    android:viewportHeight="496" android:viewportWidth="496"
+    android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#f0bc5e" android:pathData="m496,406.145v-60.281l-22.527,-6.039c-0.887,-2.383 -1.887,-4.77 -2.984,-7.137l11.672,-20.23 -42.609,-42.609 -20.23,11.672c-2.367,-1.094 -4.754,-2.094 -7.137,-2.984l-6.039,-22.535h-60.281l-6.039,22.527c-2.383,0.887 -4.77,1.887 -7.137,2.984l-20.23,-11.672 -42.609,42.609 11.672,20.23c-1.336,2.879 -2.512,5.77 -3.527,8.625l42.008,2.695v1.039c10.91,-19.695 31.887,-33.039 56,-33.039 35.344,0 64,28.656 64,64s-28.656,64 -64,64c-24.113,0 -45.09,-13.344 -56,-33.039v1.039l-42.016,2.695c1.016,2.855 2.191,5.754 3.52,8.617l-11.664,20.23 42.609,42.609 20.23,-11.672c2.367,1.094 4.754,2.094 7.137,2.984l6.039,22.535h60.281l6.039,-22.527c2.383,-0.887 4.77,-1.887 7.137,-2.984l20.23,11.672 42.609,-42.609 -11.672,-20.23c1.094,-2.367 2.094,-4.754 2.984,-7.137zM496,406.145"/>
+    <path android:fillColor="#f0bc5e" android:pathData="m256,240h-224v-144h224zM256,240"/>
+    <path android:fillColor="#FF000000" android:pathData="m0,0v384h41.871c2.016,4.586 5.527,8.449 10.328,10.504l50.16,21.496h213.816c12.938,19.281 34.922,32 59.824,32 39.695,0 72,-32.305 72,-72s-32.305,-72 -72,-72c-24.902,0 -46.887,12.719 -59.824,32h-213.816l-50.168,21.496c-4.793,2.055 -8.313,5.918 -10.32,10.504h-25.871v-288h432v198.297l16,16v-294.297zM376,320c30.879,0 56,25.121 56,56s-25.121,56 -56,56 -56,-25.121 -56,-56 25.121,-56 56,-56zM304.473,368h-160.473v16h160.473c0.617,5.551 1.918,10.895 3.727,16h-196.199v-16h16v-16h-16v-16h196.199c-1.809,5.105 -3.109,10.449 -3.727,16zM58.504,372.199 L96,356.129v39.734l-37.496,-16.063c-1.52,-0.648 -2.504,-2.145 -2.504,-3.801s0.984,-3.152 2.504,-3.801zM16,64v-48h432v48zM16,64"/>
+    <path android:fillColor="#FF000000" android:pathData="m376,416c22.055,0 40,-17.945 40,-40s-17.945,-40 -40,-40 -40,17.945 -40,40 17.945,40 40,40zM376,352c13.23,0 24,10.77 24,24s-10.77,24 -24,24 -24,-10.77 -24,-24 10.77,-24 24,-24zM376,352"/>
+    <path android:fillColor="#FF000000" android:pathData="m32,32h16v16h-16zM32,32"/>
+    <path android:fillColor="#FF000000" android:pathData="m64,32h16v16h-16zM64,32"/>
+    <path android:fillColor="#FF000000" android:pathData="m96,32h16v16h-16zM96,32"/>
+    <path android:fillColor="#FF000000" android:pathData="m272,96h16v16h-16zM272,96"/>
+    <path android:fillColor="#FF000000" android:pathData="m304,96h128v16h-128zM304,96"/>
+    <path android:fillColor="#FF000000" android:pathData="m272,128h160v16h-160zM272,128"/>
+    <path android:fillColor="#FF000000" android:pathData="m272,160h160v16h-160zM272,160"/>
+    <path android:fillColor="#FF000000" android:pathData="m352,192h80v16h-80zM352,192"/>
+    <path android:fillColor="#FF000000" android:pathData="m272,192h64v16h-64zM272,192"/>
+    <path android:fillColor="#FF000000" android:pathData="m272,224h128v16h-128zM272,224"/>
+    <path android:fillColor="#FF000000" android:pathData="m48,256c-8.824,0 -16,7.176 -16,16v16c0,8.824 7.176,16 16,16h32c8.824,0 16,-7.176 16,-16v-16c0,-8.824 -7.176,-16 -16,-16zM48,288v-16h32l0.008,16zM48,288"/>
+    <path android:fillColor="#FF000000" android:pathData="m128,256c-8.824,0 -16,7.176 -16,16v16c0,8.824 7.176,16 16,16h32c8.824,0 16,-7.176 16,-16v-16c0,-8.824 -7.176,-16 -16,-16zM128,288v-16h32l0.008,16zM128,288"/>
+    <path android:fillColor="#FF000000" android:pathData="m208,304h32c8.824,0 16,-7.176 16,-16v-16c0,-8.824 -7.176,-16 -16,-16h-32c-8.824,0 -16,7.176 -16,16v16c0,8.824 7.176,16 16,16zM208,272h32l0.008,16h-32.008zM208,272"/>
+    <path android:fillColor="#FF000000" android:pathData="m64,128h128v16h-128zM64,128"/>
+    <path android:fillColor="#FF000000" android:pathData="m208,128h16v16h-16zM208,128"/>
+    <path android:fillColor="#FF000000" android:pathData="m96,160h128v16h-128zM96,160"/>
+    <path android:fillColor="#FF000000" android:pathData="m64,192h128v16h-128zM64,192"/>
+    <path android:fillColor="#FF000000" android:pathData="m64,160h16v16h-16zM64,160"/>
+</vector>

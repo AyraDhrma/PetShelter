@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "1081253808786",
+    "firebase_url": "https://animalshelter-b48af.firebaseio.com",
+    "project_id": "animalshelter-b48af",
+    "storage_bucket": "animalshelter-b48af.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1081253808786:android:48cae8dd28cc42a4",
+        "android_client_info": {
+          "package_name": "com.ayra.animalshelter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1081253808786-1rvbt270bce62f9rmdutpc2n1ud8105u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ayra.animalshelter",
+            "certificate_hash": "48c740f730df45d3d9f0d9b26bd333917e914bda"
+          }
+        },
+        {
+          "client_id": "1081253808786-siddqu9on0he294p9djpl9n6envrh7i7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_ZhQAk_M0wRz0PYxegAn1NDGL7oZWWjY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1081253808786-siddqu9on0he294p9djpl9n6envrh7i7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1081253808786:android:3e8884b28e83140a",
+        "android_client_info": {
+          "package_name": "com.ayra.petshelter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1081253808786-bqh619lj7u0g8ur2vnsu20v94lje4jvn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ayra.petshelter",
+            "certificate_hash": "48c740f730df45d3d9f0d9b26bd333917e914bda"
+          }
+        },
+        {
+          "client_id": "1081253808786-siddqu9on0he294p9djpl9n6envrh7i7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_ZhQAk_M0wRz0PYxegAn1NDGL7oZWWjY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1081253808786-siddqu9on0he294p9djpl9n6envrh7i7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
