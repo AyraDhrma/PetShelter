@@ -1,40 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardBackgroundColor="#fff"
-    app:cardCornerRadius="3dp"
-    app:cardElevation="3dp"
-    app:contentPadding="5dp"
-    app:cardUseCompatPadding="true">
 
-    <LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <TextView
-            android:id="@+id/rTitleTv"
-            android:text="Title"
-            android:textColor="#000"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <ImageView
-            android:id="@+id/rImageView"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="fitCenter"
-            android:adjustViewBounds="true"
-            android:background="@color/common_google_signin_btn_text_light_disabled"/>
-        <TextView
-            android:id="@+id/rDescriptionTv"
-            android:text="This will be the description of the post"
-            android:textSize="20sp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+        app:cardBackgroundColor="#fff"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="3dp"
+        app:cardUseCompatPadding="true"
+        tools:ignore="MissingConstraints">
 
-    </LinearLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-</androidx.cardview.widget.CardView>
+            <ImageView
+                android:id="@+id/rImageView"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:adjustViewBounds="true"
+                android:background="@color/cardview_shadow_start_color"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/rTitleTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cardview_shadow_start_color"
+                android:text="Title"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorNavigationText"
+                android:textSize="26sp"
+                android:padding="16dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/rDescriptionTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@color/cardview_shadow_start_color"
+                android:text="Title"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorNavigationText"
+                android:textSize="26sp"
+                android:padding="16dp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/rDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@color/cardview_shadow_start_color"
+                android:text="Title"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorNavigationText"
+                android:textSize="26sp"
+                android:padding="16dp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

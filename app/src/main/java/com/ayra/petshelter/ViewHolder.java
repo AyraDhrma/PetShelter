@@ -12,6 +12,8 @@ import com.squareup.picasso.Picasso;
 public class ViewHolder extends RecyclerView.ViewHolder {
 
     View mView;
+    public ViewHolder.ClickListener mClickListener;
+
 
     public ViewHolder(View itemView) {
         super(itemView);
@@ -26,24 +28,33 @@ public class ViewHolder extends RecyclerView.ViewHolder {
             }
         });
 
+        itemView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                mClickListener.onItemlongClick(view, getAdapterPosition());
+                return true;
+            }
+        });
+
     }
 
-    public void setDetails(Context ctx, String name, String breed, String url){
+    public void setDetails(Context ctx, String name, String breed, String url, String desc){
         //Views
         TextView mTitleTv = mView.findViewById(R.id.rTitleTv);
         TextView mDetailTv = mView.findViewById(R.id.rDescriptionTv);
         ImageView mImageIv = mView.findViewById(R.id.rImageView);
+        TextView mDetail = mView.findViewById(R.id.rDescription);
         //set data to views
         mTitleTv.setText(name);
         mDetailTv.setText(breed);
+        mDetail.setText(desc);
         Picasso.get().load(url).into(mImageIv);
     }
-
-    private ViewHolder.ClickListener mClickListener;
 
     //interface to send callbacks
     public interface ClickListener{
         void onItemClick(View view, int position);
+        void onItemlongClick(View view, int position);
     }
 
     public void setOnClickListener(ViewHolder.ClickListener clickListener){

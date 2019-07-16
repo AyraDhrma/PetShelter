@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment_about">
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".FragmentAbout">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+
+    <ImageView
+        android:id="@+id/imageView3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingLeft="@dimen/horizontal"
-        android:paddingRight="@dimen/horizontal"
-        android:text="@string/about_us_text"
-        android:gravity="center"/>
+        app:srcCompat="@drawable/about_us" />
 
 </FrameLayout>
