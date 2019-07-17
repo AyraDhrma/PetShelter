@@ -7,4 +7,5 @@
     <color name="colorNavigationIcon">#dae9f6</color>
     <color name="colorNavigationText">#ffffff</color>
     <color name="web_color">#fab700</color>
+    <color name="web_yellow">#ffe88b</color>
 </resources>
