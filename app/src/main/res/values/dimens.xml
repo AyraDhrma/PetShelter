@@ -2,4 +2,5 @@
 <resources>
     <dimen name="horizontal">20dp</dimen>
     <dimen name="vertical">20dp</dimen>
+    <dimen name="padding_bot">16dp</dimen>
 </resources>

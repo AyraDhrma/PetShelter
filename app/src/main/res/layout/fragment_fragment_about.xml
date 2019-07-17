@@ -1,18 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".FragmentAbout">
+    tools:context=".FragmentAbout"
+    android:background="@drawable/polosan1">
 
     <!-- TODO: Update blank fragment layout -->
-
-
-    <ImageView
-        android:id="@+id/imageView3"
+    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:srcCompat="@drawable/about_us" />
+        tools:context=".MainActivity">
+
+        <FrameLayout
+            android:id="@+id/fl_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bn_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/white"
+            app:itemIconTint="@drawable/selector_menu"
+            app:itemTextColor="@drawable/selector_menu"
+            app:menu="@menu/bottomnavigation_menu" />
+
+
+    </RelativeLayout>
 
 </FrameLayout>
