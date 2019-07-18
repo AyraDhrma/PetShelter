@@ -8,28 +8,47 @@
     android:background="@drawable/polosan1">
 
     <!-- TODO: Update blank fragment layout -->
-    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginLeft="70dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="3dp">
 
-        <FrameLayout
-            android:id="@+id/fl_container"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
-
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bn_main"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:background="@android:color/white"
-            app:itemIconTint="@drawable/selector_menu"
-            app:itemTextColor="@drawable/selector_menu"
-            app:menu="@menu/bottomnavigation_menu" />
+            android:orientation="vertical">
 
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
 
-    </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="About Us"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:gravity="center"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="15dp"
+                android:textSize="18sp"
+                android:text="Shelter that you love; we are here to save animal. Pet Shelter is web site and application that provides services shelters animals. Pet shelter just focus on cats and dogs. we are open enrollment to the volunteers who want to help the animals, and if you want to adopt the animals you can see in the 'adopt' page of our web and our application."
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
 
 </FrameLayout>

@@ -22,7 +22,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
-                android:background="@drawable/about_img"
+                android:background="@drawable/ct5"
                 android:scaleType="fitXY" />
 
             <Space

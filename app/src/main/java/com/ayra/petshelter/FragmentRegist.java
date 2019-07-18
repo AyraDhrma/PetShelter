@@ -1,5 +1,6 @@
 package com.ayra.petshelter;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -47,7 +48,6 @@ public class FragmentRegist extends Fragment {
                 } else {
                     if (email_name.matches(email_pattern)) {
                         if (phone_name.matches(phone_pattern)) {
-                            Toast.makeText(getActivity().getApplicationContext(), "Valid email address", Toast.LENGTH_SHORT).show();
 
                             getset.setUser_name(full_name);
                             getset.setEmail(email_name);
@@ -58,6 +58,9 @@ public class FragmentRegist extends Fragment {
                             fName.setText(null);
                             fEmail.setText(null);
                             fPhone.setText(null);
+
+                            Intent intent = new Intent(getActivity(), RegistSuccess.class);
+                            startActivity(intent);
                         }else {
                             Toast.makeText(getActivity().getApplicationContext(), "Invalid Your Phone", Toast.LENGTH_SHORT).show();
                         }
