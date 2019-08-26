@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -22,6 +23,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/oswaldregular"
                 android:text="Do you want to become a volunteer?"
                 android:textAlignment="center"
                 android:textColor="#000"
@@ -32,23 +34,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp" />
 
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/oswaldregular"
                 android:text="Full Name"
                 android:textAlignment="center"
                 android:textColor="#000"
                 android:textSize="20sp" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
 
             <EditText
                 android:id="@+id/Fullname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/oswaldlight"
                 android:gravity="center_horizontal"
                 android:hint="Full Name"
                 android:inputType="text"
@@ -61,6 +65,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/oswaldregular"
                 android:text="Email"
                 android:textAlignment="center"
                 android:textColor="#000"
@@ -75,6 +80,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/oswaldlight"
                 android:gravity="center_horizontal"
                 android:hint="Email (yourmail@gmail.com)"
                 android:inputType="text"
@@ -87,6 +93,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/oswaldregular"
                 android:text="Phone Number"
                 android:textAlignment="center"
                 android:textColor="#000"
@@ -101,6 +108,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/oswaldlight"
                 android:gravity="center_horizontal"
                 android:hint="Phone Number"
                 android:inputType="number"
@@ -110,11 +118,11 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/linear_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/linear_regist"
-            android:gravity="center"
-            android:padding="16dp">
+            android:gravity="center">
 
             <Button
                 android:id="@+id/Register"
@@ -129,6 +137,17 @@
                 android:textSize="24sp" />
 
         </LinearLayout>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bn_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_button"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/white"
+            app:itemIconTint="@drawable/selector_menu"
+            app:itemTextColor="@drawable/selector_menu"
+            app:menu="@menu/bottomnavigation_menu" />
 
     </RelativeLayout>
 

@@ -10,14 +10,14 @@
         android:id="@+id/linear_regist"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
         android:orientation="vertical"
-        android:padding="16dp"
-        android:layout_marginTop="100dp">
+        android:padding="16dp">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_check_box_black_24dp"/>
+            android:src="@drawable/ic_check_box_black_24dp" />
 
         <Space
             android:layout_width="match_parent"
@@ -26,6 +26,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/oswaldbold"
             android:text="Register Successfull"
             android:textAlignment="center"
             android:textColor="#fab700"
@@ -39,6 +40,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/oswaldbold"
             android:text="We will contact you later"
             android:textAlignment="center"
             android:textColor="#fab700"
@@ -52,8 +54,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/linear_regist"
-        android:gravity="center"
         android:layout_alignParentBottom="true"
+        android:gravity="center"
         android:padding="16dp">
 
         <Button
@@ -63,6 +65,7 @@
             android:layout_gravity="center"
             android:layout_margin="16dp"
             android:background="@drawable/buttonshape"
+            android:fontFamily="@font/oswaldbold"
             android:text="Back to home"
             android:textAllCaps="false"
             android:textColor="#ffffff"

@@ -21,6 +21,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/oswaldregular"
             android:gravity="center"
             android:text="You are about to adopt"
             android:textColor="#000"
@@ -37,6 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:fontFamily="@font/oswaldlight"
             android:gravity="center"
             android:text="Name"
             android:textColor="#000"
@@ -49,6 +51,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/oswaldregular"
             android:gravity="center"
             android:text="This is the contact information :"
             android:textColor="#000"
@@ -62,6 +65,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/oswaldlight"
             android:padding="8dp"
             android:text="Email : AryaDharma5007@gmail.com"
             android:textColor="#000" />
@@ -70,10 +74,11 @@
             android:id="@+id/btn_mail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="6dp"
             android:background="@drawable/buttonshape"
+            android:fontFamily="@font/oswaldbold"
             android:text="Email"
-            android:textColor="#fff"
-            android:layout_margin="6dp"/>
+            android:textColor="#fff" />
 
         <Space
             android:layout_width="match_parent"
@@ -82,6 +87,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/oswaldlight"
             android:padding="8dp"
             android:text="Phone : 081283333333"
             android:textColor="#000" />
@@ -90,8 +96,9 @@
             android:id="@+id/btn_call"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/buttonshape"
             android:layout_margin="6dp"
+            android:background="@drawable/buttonshape"
+            android:fontFamily="@font/oswaldbold"
             android:text="Call Us"
             android:textColor="#fff" />
 

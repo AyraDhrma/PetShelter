@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -18,7 +19,7 @@ import java.io.ByteArrayOutputStream;
 public class Detail extends AppCompatActivity {
 
     TextView mName, mBreed, mDesc;
-    ImageView mImageIv, back_arrow;
+    ImageView mImageIv;
     Button btn_adopt;
 
     @Override
@@ -31,7 +32,6 @@ public class Detail extends AppCompatActivity {
         mBreed = findViewById(R.id.tv_breed);
         mDesc = findViewById(R.id.tv_desc);
         mImageIv = findViewById(R.id.iv_image);
-//        back_arrow = findViewById(R.id.back_arrow_detail);
         btn_adopt = findViewById(R.id.button_adopt);
 
         byte[] bytes = getIntent().getByteArrayExtra("url");
@@ -44,14 +44,6 @@ public class Detail extends AppCompatActivity {
         mBreed.setText(breed);
         mDesc.setText(desc);
         mImageIv.setImageBitmap(bm);
-
-//        back_arrow.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(Detail.this, FragmentAdopt.class);
-//                startActivity(intent);
-//            }
-//        });
 
         btn_adopt.setOnClickListener(new View.OnClickListener() {
             @Override

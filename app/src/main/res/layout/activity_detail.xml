@@ -46,6 +46,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:fontFamily="@font/oswaldregular"
                         android:gravity="center"
                         android:text="Name"
                         android:textAlignment="center"
@@ -58,6 +59,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:fontFamily="@font/oswaldlight"
                         android:gravity="center"
                         android:text="Name"
                         android:textAlignment="center"
@@ -79,6 +81,7 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         android:text="Breed"
+                        android:fontFamily="@font/oswaldregular"
                         android:textAlignment="center"
                         android:textColor="#000"
                         android:textSize="24sp"
@@ -89,6 +92,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:fontFamily="@font/oswaldlight"
                         android:gravity="center"
                         android:text="Breed"
                         android:textAlignment="center"
@@ -117,6 +121,7 @@
                     android:text="Description"
                     android:textAlignment="center"
                     android:textColor="#000"
+                    android:fontFamily="@font/oswaldregular"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -126,6 +131,7 @@
 
                 <TextView
                     android:id="@+id/tv_desc"
+                    android:fontFamily="@font/oswaldlight"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -148,6 +154,7 @@
         android:layout_margin="8dp"
         android:background="@drawable/buttonshape"
         android:text="@string/adopt"
+        android:fontFamily="@font/oswaldbold"
         android:textColor="#fff" />
 
 </RelativeLayout>
