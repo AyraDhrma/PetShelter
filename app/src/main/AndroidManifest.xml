@@ -11,11 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_foreground"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RegistSuccess"></activity>
-        <activity android:name=".Adopt" />
-        <activity android:name=".Detail" />
+        <activity android:name=".ui.RegisterSuccess"></activity>
+        <activity android:name=".ui.Adopt" />
+        <activity android:name=".ui.Detail" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

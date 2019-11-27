@@ -1,69 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/polosan1"
-    tools:context=".FragmentAbout">
+    tools:context=".ui.FragmentAbout">
 
-    <RelativeLayout
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_margin="64dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
-        <androidx.cardview.widget.CardView
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="70dp"
-            android:layout_marginTop="100dp"
-            android:layout_marginRight="70dp"
-            app:cardCornerRadius="10dp"
-            app:cardElevation="3dp">
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:text="@string/about_us"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="10dp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="About Us"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="20dp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:padding="15dp"
-                    android:text="Shelter that you love; we are here to save animal. Pet Shelter is web site and application that provides services shelters animals. Pet shelter just focus on cats and dogs. we are open enrollment to the volunteers who want to help the animals, and if you want to adopt the animals you can see in the 'adopt' page of our web and our application."
-                    android:textSize="18sp" />
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bn_main"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:background="@android:color/white"
-            app:itemIconTint="@drawable/selector_menu"
-            app:itemTextColor="@drawable/selector_menu"
-            app:menu="@menu/bottomnavigation_menu" />
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="@string/about_us_content"
+            android:textAlignment="center"
+            android:textSize="18sp" />
 
-    </RelativeLayout>
+    </androidx.cardview.widget.CardView>
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

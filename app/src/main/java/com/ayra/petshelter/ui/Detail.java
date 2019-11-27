@@ -1,11 +1,8 @@
-package com.ayra.petshelter;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.ayra.petshelter.ui;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -13,6 +10,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.ayra.petshelter.R;
 
 import java.io.ByteArrayOutputStream;
 
@@ -45,20 +46,17 @@ public class Detail extends AppCompatActivity {
         mDesc.setText(desc);
         mImageIv.setImageBitmap(bm);
 
-        btn_adopt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Drawable mDrawable = mImageIv.getDrawable();
-                Bitmap mBitmap = ((BitmapDrawable) mDrawable).getBitmap();
-                final String name_adopt = name;
-                ByteArrayOutputStream stream = new ByteArrayOutputStream();
-                mBitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
-                byte[] bytes = stream.toByteArray();
-                Intent intent = new Intent(Detail.this, Adopt.class);
-                intent.putExtra("name", name_adopt);
-                intent.putExtra("url", bytes);
-                startActivity(intent);
-            }
+        btn_adopt.setOnClickListener(view -> {
+            Drawable mDrawable = mImageIv.getDrawable();
+            Bitmap mBitmap = ((BitmapDrawable) mDrawable).getBitmap();
+            final String name_adopt = name;
+            ByteArrayOutputStream stream = new ByteArrayOutputStream();
+            mBitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
+            byte[] bytes1 = stream.toByteArray();
+            Intent intent = new Intent(Detail.this, Adopt.class);
+            intent.putExtra("name", name_adopt);
+            intent.putExtra("url", bytes1);
+            startActivity(intent);
         });
     }
 

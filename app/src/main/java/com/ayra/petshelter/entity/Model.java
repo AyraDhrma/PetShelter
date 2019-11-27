@@ -1,8 +1,8 @@
-package com.ayra.petshelter;
+package com.ayra.petshelter.entity;
 
 public class Model {
 
-    String breed, desc, name, url, email, telepon, user_name, user_id;
+    private String breed, desc, name, url, email, phone, user_name, user_id;
 
     public Model(){}
 
@@ -46,12 +46,12 @@ public class Model {
         this.email = email;
     }
 
-    public String getTelepon() {
-        return telepon;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setTelepon(String telepon) {
-        this.telepon = telepon;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public String getUser_name() {

@@ -1,9 +1,8 @@
-package com.ayra.petshelter;
+package com.ayra.petshelter.ui;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -17,6 +16,8 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.ayra.petshelter.R;
+import com.ayra.petshelter.entity.Model;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
@@ -26,12 +27,8 @@ import java.io.ByteArrayOutputStream;
 
 public class FragmentAdopt extends Fragment {
 
-    private Activity mActivity;
     private RecyclerView mRecyclerView;
-    private FirebaseDatabase mFirebaseDatabase;
     private DatabaseReference mRef;
-    private FirebaseRecyclerAdapter<Model, ViewHolder> mAdapter;
-    private TextView tvTitle;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -40,7 +37,7 @@ public class FragmentAdopt extends Fragment {
         mRecyclerView = rootView.findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
 
-        mFirebaseDatabase = FirebaseDatabase.getInstance();
+        FirebaseDatabase mFirebaseDatabase = FirebaseDatabase.getInstance();
         mRef = mFirebaseDatabase.getReference("Posts");
 
         return rootView;
@@ -50,7 +47,7 @@ public class FragmentAdopt extends Fragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mActivity = getActivity();
+        Activity mActivity = getActivity();
 
         LinearLayoutManager mManager = new LinearLayoutManager(mActivity);
         mManager.setReverseLayout(true);
@@ -62,36 +59,39 @@ public class FragmentAdopt extends Fragment {
                         .setQuery(mRef, Model.class)
                         .build();
 
-        mAdapter = new FirebaseRecyclerAdapter<Model, ViewHolder>(options) {
+        //get data from views
+        //pass this data to new activity
+        //put bitmap image as array of bytes
+        // put title
+        //put description
+        //start activity
+        FirebaseRecyclerAdapter<Model, ViewHolder> mAdapter = new FirebaseRecyclerAdapter<Model, ViewHolder>(options) {
             @Override
             protected void onBindViewHolder(ViewHolder viewHolder, int position, Model model) {
                 viewHolder.setDetails(getContext(), model.getName(), model.getBreed(), model.getUrl(), model.getDesc());
 
-                viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        TextView mTitleTv = view.findViewById(R.id.rTitleTv);
-                        TextView mDescTv = view.findViewById(R.id.rDescriptionTv);
-                        TextView mDesc2 = view.findViewById(R.id.rDescription);
-                        ImageView mImageView = view.findViewById(R.id.rImageView);
-                        //get data from views
-                        String mTitle = mTitleTv.getText().toString();
-                        String mDesc = mDescTv.getText().toString();
-                        String mNewDesc = mDesc2.getText().toString();
-                        Drawable mDrawable = mImageView.getDrawable();
-                        Bitmap mBitmap = ((BitmapDrawable) mDrawable).getBitmap();
+                viewHolder.itemView.setOnClickListener(view -> {
+                    TextView mTitleTv = view.findViewById(R.id.rTitleTv);
+                    TextView mDescTv = view.findViewById(R.id.rDescriptionTv);
+                    TextView mDesc2 = view.findViewById(R.id.rDescription);
+                    ImageView mImageView = view.findViewById(R.id.rImageView);
+                    //get data from views
+                    String mTitle = mTitleTv.getText().toString();
+                    String mDesc = mDescTv.getText().toString();
+                    String mNewDesc = mDesc2.getText().toString();
+                    Drawable mDrawable = mImageView.getDrawable();
+                    Bitmap mBitmap = ((BitmapDrawable) mDrawable).getBitmap();
 
-                        //pass this data to new activity
-                        Intent intent = new Intent(view.getContext(), Detail.class);
-                        ByteArrayOutputStream stream = new ByteArrayOutputStream();
-                        mBitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
-                        byte[] bytes = stream.toByteArray();
-                        intent.putExtra("url", bytes); //put bitmap image as array of bytes
-                        intent.putExtra("name", mTitle); // put title
-                        intent.putExtra("breed", mDesc);
-                        intent.putExtra("desc", mNewDesc);//put description
-                        startActivity(intent); //start activity
-                    }
+                    //pass this data to new activity
+                    Intent intent = new Intent(view.getContext(), Detail.class);
+                    ByteArrayOutputStream stream = new ByteArrayOutputStream();
+                    mBitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
+                    byte[] bytes = stream.toByteArray();
+                    intent.putExtra("url", bytes); //put bitmap image as array of bytes
+                    intent.putExtra("name", mTitle); // put title
+                    intent.putExtra("breed", mDesc);
+                    intent.putExtra("desc", mNewDesc);//put description
+                    startActivity(intent); //start activity
                 });
             }
 
@@ -106,18 +106,6 @@ public class FragmentAdopt extends Fragment {
 
         mAdapter.startListening();
         mRecyclerView.setAdapter(mAdapter);
-
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-
-
-
-
-
-
 
     }
 

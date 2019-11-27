@@ -1,6 +1,4 @@
-package com.ayra.petshelter;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.ayra.petshelter.ui;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -11,6 +9,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.ayra.petshelter.R;
 
 public class Adopt extends AppCompatActivity implements View.OnClickListener{
 
